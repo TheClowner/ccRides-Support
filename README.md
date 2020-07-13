@@ -12,8 +12,8 @@ Features
   - [Chairswing](https://github.com/TheClowner/ccRides-Support/wiki/Chairswing) 
   - [Ferris Wheel](https://github.com/TheClowner/ccRides-Support/wiki/Ferris-Wheel)
   - [Jets](https://github.com/TheClowner/ccRides-Support/wiki/Jets)
-  - [Drop Tower](https://github.com/TheClowner/ccRides/wiki/Drop-Tower)
-  - [Teacups](https://github.com/TheClowner/ccRides/wiki/Teacups)
+  - [Drop Tower](https://github.com/TheClowner/ccRides-Support/wiki/Drop-Tower)
+  - [Teacups](https://github.com/TheClowner/ccRides-Support/wiki/Teacups)
 - Multiple Instances of a single ride type
   - *Need a big carousel and a little one? No Problem.*
 - Optional Vault integration to charge entry fee
