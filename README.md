@@ -7,13 +7,14 @@ Premium Spigot Plugin to add Funfair / Theme Park / Carnival Rides to your minec
 
 Features
 ---------
-- Four ride types:
+- Seven ride types:
   - [Carousel](https://github.com/TheClowner/ccRides-Support/wiki/Carousel) 
   - [Chairswing](https://github.com/TheClowner/ccRides-Support/wiki/Chairswing) 
   - [Ferris Wheel](https://github.com/TheClowner/ccRides-Support/wiki/Ferris-Wheel)
   - [Jets](https://github.com/TheClowner/ccRides-Support/wiki/Jets)
   - [Drop Tower](https://github.com/TheClowner/ccRides-Support/wiki/Drop-Tower)
   - [Teacups](https://github.com/TheClowner/ccRides-Support/wiki/Teacups)
+  - [Pendulum](https://github.com/TheClowner/ccRides-Support/wiki/Pendulum)
 - Multiple Instances of a single ride type
   - *Need a big carousel and a little one? No Problem.*
 - Optional Vault integration to charge entry fee
