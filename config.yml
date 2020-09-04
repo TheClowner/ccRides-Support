@@ -1,0 +1,43 @@
+# Please do not touch
+confVersion: 4
+
+# Settings about linking to other plugins
+Integrations:
+  vault: false
+  placeholderAPI: false
+  clearlag: false
+
+# Commands Options
+Commands:
+  # Enable/Disable the player commands
+  # If false, you can only join rides through signs,
+  # or clicking their seats if they have JOIN_BY_CART enabled.
+  enablePlayerCommands: true
+
+# Permissions settings
+Permissions:
+  # whether each ride needs separate permissions,
+  # if false then 'ccrides.user' grants access to all rides.
+  # Per-Ride permissions in format 'ccrides.ride.[rideName]'
+  perRidePermissions: false
+
+# Ride Entities Settings
+Entities:
+  # Update the location of entities even when the ride isn't moving.
+  # Please enable if parts of your rides move when the ride isn't in motion
+  # Shouldn't be necessary for 1.12+
+  forceUpdateLocations: false
+  # How often to update these locations. in ticks.
+  forceUpdateInterval: 1
+
+# Other Ride settings
+Rides:
+  # Enable/Disable ride messages
+  Messages:
+    broadcastPaidPrice: true
+    broadcastCountdown: true
+    broadcastWaitingPlayers: true
+    broadcastRideFull: true
+    broadcastNoPermission: true
+    broadcastNoFunds: true
+    broadcastSeatTaken: true
