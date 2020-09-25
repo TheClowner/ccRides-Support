@@ -1,9 +1,9 @@
-##########################
-# ccRides Default Config #
-##########################
+##############################
+# ccRides Main Configuration #
+##############################
 
 # Please do not touch
-confVersion: 4
+confVersion: 7
 
 # Settings about linking to other plugins
 Integrations:
@@ -45,3 +45,20 @@ Rides:
     broadcastNoPermission: true
     broadcastNoFunds: true
     broadcastSeatTaken: true
+  Operation:
+    # Allow rides to start automatically after passing their 'START_PLAYERS' setting.
+    enableAutoStart: true
+    # Force Chunks containing a ride to stay loaded
+    forceLoadChunks: false
+    # Options for ride queues
+    Queue:
+      # Enable or disable queues completely
+      enable: true
+      # Enable the fast Queues - players who have 'fastPasses' will be able to join rides faster.
+      # FastPasses are unlimited for players with 'ccrides.fastpass.unlimited' permission
+      enableFastQueue: false
+      # QUEUE PRIORITIES
+      # For every x players in the fast queue, how many do we let in from the normal queue
+      # The default (3 fast, 1 normal) means one rider is let in from the normal queue for every three in the fast queue.
+      fastPriority: 3
+      normalPriority: 1

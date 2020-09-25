@@ -1,9 +1,5 @@
-############################
-# ccRides Default Messages #
-############################
-
 #No touchey
-messagesVersion: 8
+messagesVersion: 9
 
 #Added to the start of most messages
 Prefix: "&b&lccRides &1» "
@@ -12,6 +8,7 @@ Prefix: "&b&lccRides &1» "
 Ride:
   queue:
     joined: "&9You joined {ride}'s queue. &b{place} &9players are ahead of you.\n&9Use &7/ride lq&9 to abandon the queueing."
+    joinedFast: "&9You joined {ride}'s fast queue. &b{place} &9players are ahead of you.\n&9Use &7/ride lq&9 to abandon the queueing"
     already: "&9You are already in the Queue. \n&9You are in place &b{place} of {total}."
     alreadyOther: "&9You're already queuing for {ride}. \n&9Use &7/ride lq &9to abandon queueing."
     onRide: "&9You can't join a queue while on a ride. \n&9Use &7/ride exit&9 to leave the ride."
@@ -20,6 +17,8 @@ Ride:
   paid: "&9You paid &6{price} tokens&9 to ride on {ride}"
   noPermission: "&cYou do not have permission for this ride! :("
   seatTaken: "&cThat seat is in use!"
+  full: "&cThe ride is full, please wait until it finishes before joining."
+  running: "&cThe ride is already running, please wait until it finishes before joining."
   starting:
     needMoreRiders: "&9Waiting for {count} more players to start."
     countdown: "&9The ride will start in {time} seconds."
@@ -35,6 +34,7 @@ Placeholder:
   startingSoon: "About to Start"
   running: "Running"
   rideNotExist: "Error: RideID {RIDE} doesn't exist."
+  unlimitedPasses: "Unlimited"
 
 #Command Messages
 Command:
@@ -199,3 +199,21 @@ Command:
       unlinksign:
         click: "&9Please right click the sign to unlink it"
         unlinked: "&9Sign no longer linked to a ride"
+  FastPass:
+    help: "&1&m–-----&b ccRides FastPass Help: &1&m–---––\n
+           &7/fastpass bal&9- See how many fast passes you have\n
+           &1&m------------------------------------------"
+    helpAdmin: "&1&m–-----&b ccRides FastPass Help: &1&m–---––\n
+           &7/fastpass&9 - See how many fast passes you have\n
+           &7/fastpass bal &8[&7player&8]&9 - See how many passes a player has\n
+           &7/fastpass set &8<&7player&8> <&7amount&8>&9 - Set a player's passes\n
+           &7/fastpass add &8<&7player&8> <&7amount&8>&9 - Add more passes\n
+           &7/fastpass take &8<&7player&8> <&7amount&8>&9 - Take away passes\n
+           &7/fastpass help&9 - show this help\n
+           &1&m------------------------------------------"
+    balanceOwn: "&9You have &b{bal} &9fast passes."
+    balanceOther: "&b{player} &9has &b{bal} &9fast passes."
+    set: "&b{player} &9now has &b{bal} &9fast passes."
+    add: "&b{player} &9was given &b{amount} &9fast passes. They now have &b{bal}"
+    take: "&b{player} &9has lost &b{amount} &9fast passes. They now have &b{bal}"
+    notEnabled: "&cFastQueue features are not enabled."
