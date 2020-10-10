@@ -1,5 +1,5 @@
 #No touchey
-messagesVersion: 9
+messagesVersion: 10
 
 #Added to the start of most messages
 Prefix: "&b&lccRides &1» "
@@ -112,7 +112,7 @@ Command:
           \ &b{RIDER_COUNT}&7/&b{CAPACITY} &8// &9Queue Size: &b{QUEUE_COUNT}\n&9Base\
           \ Location: &b{BASE_LOCATION}\n"
         startEnd: "&4        --------- &cRide Operations Info &4---------\n&9Start\
-          \ Players: &b{START_PLAYERS} &8// &9Start Delay: &b{START_DELAY} seconds\n\
+          \ &9&lAuto Start: &b{AUTO_START} &8» &b{START_PLAYERS} &9players, &b{START_DELAY} seconds\n\
           &9Join After Start: &b{JOIN_AFTER_START} &8// &9Join By Cart: &b{JOIN_BY_CART}\n\
           &9Exit Teleport: &b{EXIT_TELEPORT} &8// &9Lock in cart: &b{LOCK_IN_CART}\
           \ \n&9Exit Location: &b{EXIT_LOCATION}\n"
@@ -159,6 +159,22 @@ Command:
           &9Swing Acceleration: &b{SWING_ACCELERATION} &8// &9Friction: &b{SWING_FRICTION} &8// &9Gravity &b{SWING_GRAVITY} \n\
           &9Powered Swings: &b{POWERED_SWINGS} &8// &9Show Arm: &b{SHOW_ARM} &8// &9Arm Entities: &b{ARM_ENTITIES} \n\
           &9Arm Material: &b{ARM_MATERIAL} &8// &9Arm Custom Model Data: &b{ARM_CUSTOM_MODEL_DATA} \n\
+          &4&m                                                                             "
+        swingShip: "&4        -------- &cSWING_SHIP Specific Info &4--------\n
+          &9Arm Length: &b{ARM_LENGTH} blocks &8// &9Axis: &b{AXIS} &8// &9Row Count: &b{ROW_COUNT} seats\n
+          &9Boat Length: &b{BOAT_LENGTH} blocks &8// &9Boat Arc: &b{BOAT_ARC} degrees \n
+          &9Seat Width: &b{SEAT_WIDTH} blocks\n
+          &9Swing Acceleration: &b{SWING_ACCELERATION} &8// &9Friction: &b{SWING_FRICTION} &8// &9Gravity &b{SWING_GRAVITY}\n
+          &9Powered Swings: &b{POWERED_SWINGS} &8// &9Show Arm: &b{SHOW_ARM} &8// &9Quad Arm: &b{QUAD_ARM}\n
+          &9Arm Entities: &b{ARM_ENTITIES} &8» &9Material: &b{ARM_MATERIAL} &8» &9Custom Model Data: &b{ARM_CUSTOM_MODEL_DATA}\n
+          &4&m                                                                             "
+        starFlyer: "&4        ------- &cSTAR_FLYER Specific Info &4-------\n
+          &9Radius: &b{RADIUS}                              blocks &8// &9Chain Height: &b{CHAIN_HEIGHT} &8// &9Seat Width: &b{SEAT_WIDTH}\n
+          &9Rotate Speed: &b{ROTATE_SPEED}                  ticks &8// &9Maximum Swing: &b{MAX_SWING_ANGLE} degrees\n
+          &9Acceleration Length: &b{SPIN_ACCELERATE_LENGTH} &8// &9Deceleration Length: &b{SPIN_DECELERATE_LENGTH}\n
+          &9Height: &b{LIFT_HEIGHT}                         blocks &8// &9Times, Lift: &b{LIFT_TIME} &9Hold: &b{HOLD_TIME} &9Fall: &b{FALL_TIME} ticks. \n
+          &9Show Arms: &b{SHOW_ARMS} &9Chains: &b{SHOW_CHAINS} &9Leads: &b{SHOW_LEADS} \n
+          &9Entities:                                       Arm: &b{ARM_ENTITIES} &9Chain: &b{CHAIN_ENTITIES} &8// &9Model Data, Arm: &b{ARM_CUSTOM_MODEL_DATA} &9Chain: &b{CHAIN_CUSTOM_MODEL_DATA}\n
           &4&m                                                                             "
       setting:
         list: "&9Available Settings for this ride: \n{settings}"
