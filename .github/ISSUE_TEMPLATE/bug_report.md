@@ -7,25 +7,23 @@ assignees: TheClowner
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Server and ccRides Version**
+> Please include the full ccRides version you are running from `/version ccRides` (eg. 1.5.9).
+> Please do not just say 'Latest' - check your version number!
+> Server version should include which fork you run, Spigot/Paper, and the MC version. 
+> Use `/version` to check!
+Server Version:
+ccRides Version:
+Java Version: 
 
-**Steps To Reproduce**
-Steps to reproduce the behavior:
-1. 
-2. 
-3. 
+**Describe the bug/Issue**
+> A clear and concise description of what the bug is.
 
 **Expected behavior**
-A clear and concise description of what you expected to happen.
+> A clear and concise description of what you expected to happen.
 
 **Screenshots/Video**
-If applicable, add screenshots/video to help explain your problem.
-
-**Server Details:**
- - Spigot/Paper Version: 
- - ccRides Version: 
- - Java Version: 
+> If applicable, add screenshots/video to help explain your problem.
 
 **Logs/Errors/Configs**
-Please include relevant Logs and configuration files.
+> Please include relevant Logs and configuration files.
