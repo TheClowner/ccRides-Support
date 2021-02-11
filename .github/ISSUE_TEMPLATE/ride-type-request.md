@@ -2,7 +2,7 @@
 name: Ride Type Request
 about: Propose a new ride to be added to ccRides
 title: ''
-labels: ''
+labels: Ride Type
 assignees: ''
 
 ---
