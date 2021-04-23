@@ -1,1 +1,265 @@
-#Coming soon
+#French Translation by TheIntelloBox
+
+MessagesVersion: 13
+Prefix: '&b&lccRides &1» '
+Ride:
+  queue:
+    joined: |-
+      &9Vous avez rejoint la file d'attente de {ride}. &b{place} &9joueurs sont devant vous.
+      &9Utilisez &7/ride lq&9 pour quitter la file d'attente.
+    joinedFast: |-
+      &9Vous avez rejoint la file d'attente rapide de {ride}. &b{place} &9joueurs sont devant vous.
+      &9Utilisez &7/ride lq&9 pour quitter la file d'attente.
+    already: "&9Vous êtes déjà dans la file d'attente. \n&9You are in place &b{place} of {total}."
+    alreadyOther: "&9Vous êtes déjà dans la file d'attente pour {ride}. \n&9Utilisez &7/ride lq &9pour quitter\
+      \ la file d'attente."
+    onRide: "&9Vous ne pouvez pas rejoindre la file d'attente lorsque vous êtes déjà sur un manège. \n&9Utilisez &7/ride exit&9 pour quitter\
+      \ le manège."
+    left: '&9Tu as quitté la file d''attente de {ride}.'
+  cantAfford: "&cTu n'as pas assez de &6tokens&c pour faire ce manège ! \n&cRevenez\
+    \ quand vous aurez au moins &6{price} tokens."
+  paid: '&9Vous avez payé &6{price} tokens&9 pour monter sur le manège {ride}'
+  noPermission: '&cTu n''as pas la permission pour ce manège ! :('
+  seatTaken: '&cCe siège est déjà occupé !'
+  full: '&cLe manège est complet, veuillez attendre qu''il soit fini pour le rejoindre à nouveau.'
+  running: '&cLe manège a déjà commencé, veuillez attendre qu''il soit fini pour le rejoindre à nouveau.'
+  starting:
+    needMoreRiders: '&9En attente de {count} joueurs supplémentaires pour commencer.'
+    countdown: '&9Le manège va commencer dans {time} secondes.'
+    seatsFull: '&9Tous les sièges sont occupés ! Le manège va commencer.'
+  Jets:
+    controlMessage: '&b&lJets &1&l» &b&lContrôlez la hauteur avec votre molette de défilement.'
+Placeholder:
+  enabled: Activé
+  disabled: Désactivé
+  waiting: En Attente
+  startingSoon: Sur le point de démarrer
+  running: En cours
+  rideNotExist: 'Erreur: ManègeID {RIDE} n''existe pas.'
+  unlimitedPasses: Illimité
+Command:
+  notPlayer: '&cCette commande doit être effectuée par un joueur.'
+  notEnabled: '&cLes commandes sont désactivées !'
+  noPermission: '&cTu n''as pas la permission pour ceci !'
+  listRides: "&9Les manèges disponibles sont: \n{ridelist}"
+  rideNotExist: '&cCe manège n''existe pas.'
+  playerNotExist: '&cImpossible de trouver un joueur portant ce nom. Est-il en ligne ?'
+  Player:
+    help: |-
+      &1&m–------–––&b ccManèges - Aide: &1&m––------––
+       &7/ride &8[&7nom&8]&9 - Faire un tour de manège
+       &7/ride exit&9 - Quitter le manège avant la fin
+       &7/ride lq&9 - Quitter la file d'attente
+       &7/ride list&9 - Voir la liste de tous les manèges
+       &7/ride help&9 - Voir cette aide
+       &1&m------------------------------------------
+    exit:
+      main: '&9Vous avez quitté {ride}'
+      notRiding: '&9Vous n''êtes pas dans un manège.'
+    leaveQueue:
+      main: '&9Vous avez quitté la file d''attente pour {ride}'
+      notQueueing: '&9Vous n''êtes pas dans une file d''atente'
+  Admin:
+    help: |-
+      &4&m–––----–&c ccManège - Aide Admins: &4&m––----––
+       &cAlias: &7/rideadmin /rideadm
+       &7/rideadm help &c- Voir l'aide
+       &7/rideadm reload &8<&7all&8|&7NomDuManège&8> &c- Recharger un seul manège ou tous les manèges
+       &7/rideadm create &8<&7NomDuManège&8> <&7TypeDeManège&8> &c- Créer un nouveau manège
+       &7/rideadm delete &8<&7NomDuManège&8> &c- Supprimer un manège
+       &7/rideadm linksign &8<&7NomDuManège&8> &c- Lier une pancarte à un manège
+       &7/rideadm unlinksign &c- Délier une pancarte à un manège
+       &7/rideadm list &c- Voir la liste de tous les manèges
+       &7/rideadm &8<&7nom&8> <&7info&8|&7reload&8|&7enable&8|&7disable&8>
+       &7/rideadm &8<&7nom&8> &7setting &8<&7key&8> <&7valeur&8> &c- Changer les paramètres d'un manège.
+       &4&m------------------------------------------------
+    forceRide:
+      all: '&9Tous les joueurs sont désormais sur le manège {ride}.'
+      single: '&9Le joueur {player} est désormais sur le manège {ride}.'
+    reload:
+      all: '&9Rechargement du plugin'
+      ride: '&9Rechargement du manège {ride}'
+    createRide:
+      main: '&9Nouveau manège crée: {ride} Type: {type}'
+      exists: '&c{ride} existe déjà'
+      syntax: "&cMArguments manquants/incorrects ! \n &cUsage &7/rideadm create <nom>\
+        \ <type>\n &cTypes de manèges disponibles: {types}"
+    deleteRide:
+      main: '&9Manège {ride} supprimé'
+      syntax: "&cArguments manquants ! \n &cUsage &7/rideadm delete <nom>"
+    ride:
+      enable:
+        main: '&9{ride} a été activé'
+        fail: "&c{ride} n'a pas pu être activé. \n&cVeuillez vérifier que tous ses paramètres sont\
+          \ corrects. "
+      disable: '&9{ride} a été désactivé'
+      start: '&9{ride} a été commencé'
+      stop: '&9{ride} a été arrêté'
+      error:
+        alreadyRunning: '&4Erreur: &c{ride} a déjà commencé'
+        notRunning: '&4Erreur: &c{ride} n''est pas en cours.'
+        isDisabled: '&4Erreur: &c{ride} est désactivé.'
+      info:
+        status: "&4&m                         &c&l ccManèges: Informations &4&m       \
+          \                 \n&cID du Manège: {ID} &8// &cType de Manège: {TYPE}\n&4       \
+          \ ----------- &cInformations Status Manège &4-----------\n&9Activé: &b{ENABLED} &8//\
+          \ &9En cours: &b{RUNNING} &8// &9Prix: &b{PRICE}\n&9Utilisateurs actuels / capacité:\
+          \ &b{RIDER_COUNT}&7/&b{CAPACITY} &8// &9Taille de la file d'attente: &b{QUEUE_COUNT}\n&9Localisation\
+          \ de la base: &b{BASE_LOCATION}\n"
+        startend: "&4        --------- &cManèges - Informations des opérations &4---------\n&9&lDébut\
+          \ Automatique: &b{AUTO_START} &8» &b{START_PLAYERS} &9joueurs, &b{START_DELAY}\
+          \ secondes\n&9Rejoindre après le début: &b{JOIN_AFTER_START} &8// &9Rejoindre par un siège:\
+          \ &b{JOIN_BY_CART}\n&9Téléportation de sortie: &b{EXIT_TELEPORT} &8// &9Verrouiller dans le siège:\
+          \ &b{LOCK_IN_CART} \n&9Localisation de Sortie: &b{EXIT_LOCATION}\n"
+        customModel: |
+          &9Sièges: &b{SEAT_TYPE} &9(Paramètres du modèle: &b{CUSTOM_MODEL_MATERIAL}&9, Data: &b{CUSTOM_MODEL_DATA}&9)
+        customModelName: Modèle Personnalisé
+        carousel: "&4        -------- &cCARROUSEL Informations Spécifiques &4--------\n&9Rayon:\
+          \ &b{RADIUS} &8// &9Variation de Hauteur: &b±{HEIGHT_VAR} blocs\n&9Vitesse de Rotation:\
+          \ &b{ROTATE_SPEED} ticks/rotation &8// &9Longueur du Manège &b{RIDE_LENGTH} rotations\n\
+          &9Lonngueur de l'accélération: &b{ACCELERATE_LENGTH} &8// &9Vitesse de hauteur: &b{HEIGHT_SPEED}\
+          \ &9cycles/rotation\n&9Poteaux, Item: &b{SHOW_ITEM_POLES} &9Fils: &b{SHOW_LEAD_POLES}\
+          \ &8// &9Hauteur du poteau: &b±{POLE_HEIGHT}\n&9Items du poteau: Matériau: &b{POLE_MATERIAL}&9,\
+          \ Data du Modèle: &b{POLE_MODEL_DATA}&9, Nombre: &b{POLE_ENTITIES}\n&4&m   \
+          \                                                                      \
+          \    "
+        ferrisWheel: "&4        ------ &cGrande Roue Informations Spécifiques &4------\n&9Rayon:\
+          \ &b{RADIUS} &8// &9Largeur de chariots: &b{CART_WIDTH}\n&9Axe: &b{AXIS} &9(false\
+          \ = xy, true=zy) &8// &9Longueur du Manège &b{RIDE_LENGTH} rotations\n&9Vitesse de\
+          \ Rotation: &b{ROTATE_SPEED} ticks/rotation\n&4&m                         \
+          \                                                    "
+        chairswing: "&4        ------- &cChaises Volantes Informations Spécifiques &4-------\n&9Rayon:\
+          \ &b{RADIUS} &8// &9Hauteur de la chaîne: &b{CHAIN_HEIGHT} blocs &8// &9Swing maximal:\
+          \ &b{MAX_SWING_ANGLE} degrès\n&9Vitesse de Rotation: &b{ROTATE_SPEED} ticks/rotation\
+          \ &8// &9Longueur du Manège &b{RIDE_LENGTH} rotations\n&9Longueur de l'accélération: &b{ACCELERATE_LENGTH}\
+          \ rotations\n&9Chaines, Item: &b{SHOW_ITEM_CHAINS} &9Chaînes: &b{SHOW_LEAD_CHAINS}\
+          \ \n&9Item de chaines, Materiau &b{CHAIN_MATERIAL} &9Nombre d'entités: &b{CHAIN_ENTITIES}\
+          \ &8// &9 Data du modèle: &b{CHAIN_CUSTOM_MODEL_DATA}\n&4&m                \
+          \                                                             "
+        jets: "&4         --------- &cJETS Informations Spécifiques &4---------\n&9Longueur du Bras:\
+          \ &b{ARM_LENGTH} &8// &9Centre du rayon: &b{CENTER_RADIUS} &8// &9Angle Max:\
+          \ &b{ANGLE_MAX}\n&9Vitesse de Rotation: &b{ROTATE_SPEED} ticks/rotation &8// &9Longueur du\
+          \ Manège &b{RIDE_LENGTH} rotations\n&9Longueur de l'accélération: &b{ACCELERATE_LENGTH}\
+          \ rotations &8// &9Angle Step: &b{ANGLE_STEP} degrès\n&9Bras: Fils: &b{SHOW_LEAD_ARMS}\
+          \ &9Item: &b{SHOW_ITEM_ARMS}\n&9Bras Items: Materiau: &b{ARM_MATERIAL} &9Data du\
+          \ Modèle: &b{ARM_MODEL_DATA} &9Nombre d'entités: &b{ARM_ENTITIES}\n&9Bannières:\
+          \ &b{SHOW_BANNERS} &9Items: &oimpair &b{DECOR_MATERIAL_ODD} &9&oPair &b{DECOR_MATERIAL_EVEN}\n\
+          &4&m                                                                   \
+          \          "
+        dropTower: "&4        -------- &cTOUR DE CHUTE Informations Spécifiques &4--------\n&9Ring\
+          \ Mode: &b{RING} &8// &9AXES: &b±{AXIS} &8// &9Rayon: &b{RADIUS} blocs\n\
+          &9Hauteur: &b{LIFT_HEIGHT} &8// &9Angle d'inclinaison: &b{LEAN_ANGLE}° &8// &9Hauteur de freinage:\
+          \ &b{BRAKE_HEIGHT}\n&9Accélération de la chute: &b{FALL_ACCELERATION} blocs/tick2\
+          \ &8// &9Vitesse maximale de chute: &b{MAX_FALL_STEP} blocs/tick\n&9Sequence du Manège:\
+          \ &b{SEQUENCE}\n&4&m                                                   \
+          \                          "
+        teacups: "&4        -------- &cTASSES Informations Spécifiques &4--------\n&9Rayon Principal:\
+          \ &b{MAIN_RADIUS} blocs &8// &9Sous Rayon: &b{SUB_RADIUS} blocs &8// &9Sub\
+          \ Nombre: &b{SUB_SEATS} anneaux\n&9Vitesse de Rotation Principale: &b{MAIN_ROTATE_SPEED}\
+          \ tick/rotation &8// &9Sous Vitesse de Rotation: &b{SUB_ROTATE_SPEED} tick/rotation\n\
+          &9Longueur d'Accélération: &b{ACCELERATE_LENGTH} &8// &9Longueur du Manège: &b{RIDE_LENGTH}\
+          \ &9cycles\n&4&m                                                       \
+          \                      "
+        pendulum: "&4        -------- &cPENDULE Informations Spécifiques &4--------\n&9Longueur du Bras:\
+          \ &b{ARM_LENGTH} blocs &8// &9Axes: &b{AXIS} &8// &9Rayon: &b{RADIUS}\
+          \ blocs\n&9Rotation des Sièges: &b{ROTATE_SEATS} &8// &9Temps de Rotation &b{ROTATE_TIME}\
+          \ \n&9Accéleration du Swing: &b{SWING_ACCELERATION} &8// &9Friction: &b{SWING_FRICTION}\
+          \ &8// &9Gravité &b{SWING_GRAVITY} \n&9Powered Swings: &b{POWERED_SWINGS}\
+          \ &8// &9Voir le Bras: &b{SHOW_ARM} &8// &9Entités du Bras: &b{ARM_ENTITIES} \n\
+          &9Matériau du Bras: &b{ARM_MATERIAL} &8// &9Modèle Personnalisé du Bras: &b{ARM_CUSTOM_MODEL_DATA}\
+          \ \n&4&m                                                               \
+          \              "
+        swingShip: "&4        -------- &cBÂTEAU BALANCOIRE Informations Spécifiques &4--------\n&9Longueur du\
+          \ Bras: &b{ARM_LENGTH} blocs &8// &9Axes: &b{AXIS} &8// &9Nombre de Rangées:\
+          \ &b{ROW_COUNT} sièges\n&9Longueur du Bâteau: &b{BOAT_LENGTH} blocs &8// &9Bâteau\
+          \ Arc: &b{BOAT_ARC} degrès \n&9Largueur du Siège: &b{SEAT_WIDTH} blocs\n&9Accélération\
+          \ du Swing: &b{SWING_ACCELERATION} &8// &9Friction: &b{SWING_FRICTION}\
+          \ &8// &9Gravité &b{SWING_GRAVITY}\n&9Swings Puissants: &b{POWERED_SWINGS}\
+          \ &8// &9Voir le Bras: &b{SHOW_ARM} &8// &9Quadruple Bras: &b{QUAD_ARM}\n&9Entités du Bras:\
+          \ &b{ARM_ENTITIES} &8» &9Materiau: &b{ARM_MATERIAL} &8» &9Modèle Personnalisé du Bras:\
+          \ &b{ARM_CUSTOM_MODEL_DATA}\n&4&m                                      \
+          \                                       "
+        starFlyer: "&4        ------- &cSTAR_FLYER Informations Spécifiques &4-------\n&9Rayon:\
+          \ &b{RADIUS} blocs &8// &9Longueur de la chaîne: &b{CHAIN_HEIGHT} &8// &9Largeur de sièges:\
+          \ &b{SEAT_WIDTH}\n&9Vitesse de Rotation: &b{ROTATE_SPEED} ticks &8// &9Maximum\
+          \ Swing: &b{MAX_SWING_ANGLE} degrès\n&9Longueur de l'accélération: &b{SPIN_ACCELERATE_LENGTH}\
+          \ &8// &9Longueur de Décélération: &b{SPIN_DECELERATE_LENGTH}\n&9Hauteur: &b{LIFT_HEIGHT}\
+          \ blocs &8// &9Temps, Montée: &b{LIFT_TIME} &9Point le plus haut: &b{HOLD_TIME} &9Descente:\
+          \ &b{FALL_TIME} ticks. \n&9Voir les bras: &b{SHOW_ARMS} &9Chaines: &b{SHOW_CHAINS}\
+          \ &9Fils: &b{SHOW_LEADS} \n&9Entités: Bras: &b{ARM_ENTITIES} &9Chaine: &b{CHAIN_ENTITIES}\
+          \ &8// &9Modèle, Bras: &b{ARM_CUSTOM_MODEL_DATA} &9Chaine: &b{CHAIN_CUSTOM_MODEL_DATA}\n\
+          &4&m                                                                   \
+          \          "
+        enterprise: "&4        ------- &cENTERPRISE Informations Spécifiques &4-------\n&9Axes:\
+          \ &b{AXIS} &9Flip: &b{FLIP} &8// &9Longueur du Bras: &b{ARM_LENGTH} &9Rayon:\
+          \ &b{RADIUS} blocs\n&9Angles du Bras, Min: &b{ARM_MIN_ANGLE}° &9Max: &b{ARM_MAX_ANGLE}°\
+          \ &8// &9Vitesse du Bras: &b{ARM_ANGLE_SPEED}°/tick\n&9Accélération de Rotation: &b{ROTATE_ACCELERATION}\
+          \ &8// &9Temps de Rotation &b{ROTATE_TIME} ticks/rotation \n&9Séquence du Manège: &b{SEQUENCE}\n\
+          &9Voir les Bras: &b{SHOW_ARM} &9(&b{ARM_ENTITIES} &9entités, &b{ARM_MATERIAL}\
+          \ &9Modèle de Bras: &b{ARM_CUSTOM_MODEL_DATA}&9) \n&9Voir les rayons: &b{SHOW_SPOKES}\
+          \ &9(&b{SPOKES_ENTITIES} &9entités, &b{SPOKES_MATERIAL} &9Modèle: &b{SPOKES_CUSTOM_MODEL_DATA}&9)\
+          \ \n&4&m                                                               \
+          \              "
+      setting:
+        list: "&9Paramètres disponibles pour ce manège: \n{settings}"
+        GENERAL:
+          success:
+            default: '&9{OPTION} mis à &b{VALUE}'
+            blocs: '&9{OPTION} mis à &b{VALUE} blocs'
+            degree: '&9{OPTION} mis à &b{VALUE} degrès'
+            ticks: '&9{OPTION} mis à &b{VALUE} ticks'
+            cycles: '&9{OPTION} mis à &b{VALUE} cycles'
+            axis:
+              'true': '&9{OPTION} mis à &b{VALUE}&9. Utilisation de z/y'
+              'false': '&9{OPTION} mis à &b{VALUE}&9. Utilisation de x/y'
+          fail:
+            notFound: '&4{OPTION} &cn''est pas une option valide pour ce manège.'
+            mustBeInt: '&4Valeur Invalide.&c {OPTION} doit être entier'
+            mustBeIntBlocks: '&4Valeur Invalide.&c {OPTION} doit être un nombre entier de blocs'
+            mustBeIntTicks: '&4Valeur Invalide: &c{OPTION} doit être un nombre entier de ticks (20 ticks = 1 seconde)'
+            mustBeIntCycles: '&4Valeur Invalide: &c{OPTION} doit être un nombre entier de cycles'
+            mustBeBool: '&4Valeur Invalide.&c {OPTION} doit être true/false'
+            mustBeDoub: '&4Valeur Invalide.&c {OPTION} doit être un nombre décimal'
+            mustBeDoubDegrees: '&4Valeur Invalide.&c {OPTION} doit être un nombre décimal de degrès'
+            mustBeDoubBlocks: '&4Valeur Invalide.&c {OPTION} doit être un nombre décimal de blocs'
+            mustBeMaterial: '&4Valeur Invalide.&c {OPTION} doit être un type de matériau'
+            mustBeEntityType: '&4Valeur Invalide. &c{OPTION} doit être une entité valide de Spigot'
+            mustBeSequenceList: "&4Séquence de manège invalide.\n&c Le format est &7étape1:temps1,étape2:temps2,etc...\
+              \ exemple: &c3:250,4:200,0:0\n&cLe temps est un nombre entier de ticks, l'étape\
+              \ doit aussi être un nombre entier. \n&cVoir le wiki: &bhttp://github.com/TheClowner/ccRides-Support/wiki"
+        LOCATION:
+          player: '&9{OPTION} mis sur &bvotre position.'
+          coords: '&9{OPTION} mis sur &bx{X} y{Y} z{Z}'
+          fail: '&4Valeur Incorrecte: &c{OPTION} doit avoir trois nombres, ou laissez vide pour utiliser votre position actuelle.'
+      invalidSub: '&cSous-commande non reconnue, les options sont info, reload, enable, disable,
+        setting'
+    linksign:
+      syntax: |-
+        &cVeuillez spécifier un manège auquel associer le panneau
+        &cUsage: &7/rideadm linksign &8<&7NomDuManège&8>
+      click: '&9Veuillez faire un clic droit sur le panneau pour le lier'
+      linked: '&9Le paneau est désormais lié à {ride}'
+    unlinksign:
+      click: '&9Veuillez faire un clic droit sur le panneau pour le délier'
+      unlinked: '&9Le paneau n''est désormais lié à aucun manège'
+  FastPass:
+    help: |-
+      &1&m–-----&b ccManèges: Passage Rapide - Aide: &1&m–---––
+       &7/fastpass bal&9- Voir combien de passages rapides vous avez
+       &1&m------------------------------------------
+    helpAdmin: |-
+      &1&m–-----&b ccManèges: Passage Rapide - Aide: &1&m–---––
+       &7/fastpass&9 - Voir combien de passages rapides vous avez
+       &7/fastpass bal &8[&7joueur&8]&9 - Voir combien de passages rapides a un joueur
+       &7/fastpass set &8<&7joueur&8> <&7montant&8>&9 - Mettre un nombre de passages rapides à un joueur
+       &7/fastpass add &8<&7joueur&8> <&7montant&8>&9 - Ajouter des passages rapides
+       &7/fastpass take &8<&7joueur&8> <&7montant&8>&9 - Enlever des passages rapides
+       &7/fastpass help&9 - Voir cette aide
+       &1&m------------------------------------------
+    balanceOwn: '&9Vous avez &b{bal} &9passages rapides.'
+    balanceOther: '&b{player} &9a &b{bal} &9passages rapides.'
+    set: '&b{player} &9a maintenant &b{bal} &9passages rapides.'
+    add: '&b{player} &9a reçu &b{amount} &9passages rapides. Il a désormais &b{bal}'
+    take: '&b{player} &9a perdu &b{amount} &9passages rapides. Il a désormais &b{bal}'
+    notEnabled: '&cLes fonctionnalités Passages Rapides (FastQueue) ne sont pas activées.'
+ 
