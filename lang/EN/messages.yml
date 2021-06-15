@@ -1,5 +1,5 @@
 #No touchey
-messagesVersion: 12
+messagesVersion: 13
 
 #Added to the start of most messages
 Prefix: "&b&lccRides &1» "
@@ -75,7 +75,8 @@ Command:
           &7/rideadm list &c- see a list of all rides\n
           &7/rideadm &8<&7name&8> <&7info&8|&7reload&8|&7enable&8|&7disable&8>\n
           &7/rideadm &8<&7name&8> &7setting &8<&7key&8> <&7value&8> &c- change ride settings.\n
-          &4&m------------------------------------------------"
+          &7/rideadm &8<&7name&8> &7ejectPlayer &8<&7rider&8> &c- eject a rider.\n
+      &4&m------------------------------------------------"
     forceRide:
       all: "&9Making all players ride {ride}."
       single: "&9Forcing {player} to ride {ride}."
@@ -146,10 +147,10 @@ Command:
           &9Banners: &b{SHOW_BANNERS} &9Items: &oOdd &b{DECOR_MATERIAL_ODD} &9&oEven &b{DECOR_MATERIAL_EVEN}\n
           &4&m                                                                             "
         dropTower: "&4        -------- &cDROP_TOWER Specific Info &4--------\n
-          &9Ring Mode: &b{RING} &8// &9AXIS: &b±{AXIS} &8// &9Radius: &b{RADIUS} blocks\n
-          &9Lift Height: &b{LIFT_HEIGHT} &8// &9Lean Angle: &b{LEAN_ANGLE} degrees\n
-          &9Lift Time: &b{LIFT_TIME} ticks &8// &9Hold Time: &b{HOLD_TIME} ticks &8// &9Brake Height: &b{BRAKE_HEIGHT} blocks\n
+          &9Ring Mode: &b{RING} &8// &9AXIS: &b{AXIS} &8// &9Radius: &b{RADIUS} blocks\n
+          &9Height: &b{LIFT_HEIGHT} &8// &9Lean: &b{LEAN_ANGLE}° &8// &9Brake Height: &b{BRAKE_HEIGHT}\n
           &9Fall Acceleration: &b{FALL_ACCELERATION} blocks/tick2 &8// &9Max Fall Step: &b{MAX_FALL_STEP} blocks/tick\n
+          &9Ride Sequence: &b{SEQUENCE}\n
           &4&m                                                                             "
         teacups: "&4        -------- &cTEACUPS Specific Info &4--------\n
           &9Main Radius: &b{MAIN_RADIUS} blocks &8// &9Sub Radius: &b{SUB_RADIUS} blocks &8// &9Sub Count: &b{SUB_SEATS} rings\n
@@ -179,6 +180,14 @@ Command:
           &9Show Arms: &b{SHOW_ARMS} &9Chains: &b{SHOW_CHAINS} &9Leads: &b{SHOW_LEADS} \n
           &9Entities: Arm: &b{ARM_ENTITIES} &9Chain: &b{CHAIN_ENTITIES} &8// &9Model Data, Arm: &b{ARM_CUSTOM_MODEL_DATA} &9Chain: &b{CHAIN_CUSTOM_MODEL_DATA}\n
           &4&m                                                                             "
+        enterprise: "&4        ------- &cENTERPRISE Specific Info &4-------\n
+        &9Axis: &b{AXIS} &9Flip: &b{FLIP} &8// &9Arm Length: &b{ARM_LENGTH} &9Radius: &b{RADIUS} blocks\n
+        &9Arm Angles, Min: &b{ARM_MIN_ANGLE}° &9Max: &b{ARM_MAX_ANGLE}° &8// &9Arm Speed: &b{ARM_ANGLE_SPEED}°/tick\n
+        &9Rotate Acceleration: &b{ROTATE_ACCELERATION} &8// &9Rotate Time &b{ROTATE_TIME} ticks/rotation \n
+        &9Ride Sequence: &b{SEQUENCE}\n
+        &9Show Arms: &b{SHOW_ARM} &9(&b{ARM_ENTITIES} &9enities, &b{ARM_MATERIAL} &9Model Data: &b{ARM_CUSTOM_MODEL_DATA}&9) \n
+        &9Show Spokes: &b{SHOW_SPOKES} &9(&b{SPOKES_ENTITIES} &9enities, &b{SPOKES_MATERIAL} &9Model Data: &b{SPOKES_CUSTOM_MODEL_DATA}&9) \n
+        &4&m                                                                             "
       setting:
         list: "&9Available Settings for this ride: \n{settings}"
 
@@ -204,6 +213,10 @@ Command:
             mustBeDoubBlocks: "&4Invalid Value.&c {OPTION} must be a floating point number of blocks"
             mustBeMaterial: "&4Invalid Value.&c {OPTION} must be a Spigot Material type"
             mustBeEntityType: "&4Invalid Value. &c{OPTION} must be a valid Spigot Entity type."
+            mustBeSequenceList: "&4Invalid Ride Sequence.\n
+            &c Format is &7step1:time1,step2:time2,etc... eg. &c3:250,4:200,0:0\n
+            &cTime is an integer of ticks, Step should be an integer. \n
+            &cSee Ride wiki: &bhttp://github.com/TheClowner/ccRides-Support/wiki"
 
         LOCATION:
           player: "&9{OPTION} set to &byour current position."
@@ -219,6 +232,11 @@ Command:
       unlinksign:
         click: "&9Please right click the sign to unlink it"
         unlinked: "&9Sign no longer linked to a ride"
+      ejectPlayer:
+        success: "&9{player} has been ejected from {ride}."
+        noArgs: "&cPlease specify which player to eject from {ride}!"
+        notRiding: "&c{player} is not riding on {ride}!"
+
   FastPass:
     help: "&1&m–-----&b ccRides FastPass Help: &1&m–---––\n
            &7/fastpass bal&9- See how many fast passes you have\n
