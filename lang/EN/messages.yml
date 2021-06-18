@@ -1,5 +1,5 @@
 #No touchey
-messagesVersion: 14
+messagesVersion: 15
 
 #Added to the start of most messages
 Prefix: "&b&lccRides &1» "
@@ -236,6 +236,8 @@ Command:
         success: "&9{player} has been ejected from {ride}."
         noArgs: "&cPlease specify which player to eject from {ride}!"
         notRiding: "&c{player} is not riding on {ride}!"
+      enableAll: "&9Attempting to enable all rides..."
+      disableAll: "&9Disabling all rides..."
 
   FastPass:
     help: "&1&m–-----&b ccRides FastPass Help: &1&m–---––\n
