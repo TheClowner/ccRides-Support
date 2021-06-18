@@ -3,13 +3,12 @@
 ##############################
 
 # Please do not touch
-confVersion: 7
+confVersion: 10
 
 # Settings about linking to other plugins
 Integrations:
   vault: false
   placeholderAPI: false
-  clearlag: false
 
 # Commands Options
 Commands:
@@ -33,6 +32,15 @@ Entities:
   forceUpdateLocations: false
   # How often to update these locations. in ticks.
   forceUpdateInterval: 1
+  # Enable distance checking for chunk load listener.
+  # Disabling this may have a performance penalty.
+  # But this can solve issues with missing entities on large rides and in some versions.
+  chunkDistanceCheck: true
+  # Toggle whether decoration and seat armor stands are given the Marker Tag
+  # This reduces the stand hit-box to almost nothing, which can improve lag,
+  # but the stands may not render when looking in certain directions.
+  decorationStandIsMarker: false
+  seatStandIsMarker: false
 
 # Other Ride settings
 Rides:
@@ -62,3 +70,8 @@ Rides:
       # The default (3 fast, 1 normal) means one rider is let in from the normal queue for every three in the fast queue.
       fastPriority: 3
       normalPriority: 1
+
+# Enable additional debug messages in the log.
+Debug:
+  chunkLoad: false
+  chunkUnload: false
