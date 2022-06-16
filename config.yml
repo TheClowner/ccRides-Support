@@ -3,12 +3,13 @@
 ##############################
 
 # Please do not touch
-confVersion: 10
+confVersion: 11
 
 # Settings about linking to other plugins
 Integrations:
   vault: false
   placeholderAPI: false
+  smoothCoastersAPI: true
 
 # Commands Options
 Commands:
