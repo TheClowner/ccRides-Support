@@ -3,7 +3,7 @@
 ##############################
 
 # Please do not touch
-confVersion: 11
+confVersion: 12
 
 # Settings about linking to other plugins
 Integrations:
@@ -42,6 +42,9 @@ Entities:
   # but the stands may not render when looking in certain directions.
   decorationStandIsMarker: false
   seatStandIsMarker: false
+  # Should ccRides trigger a PlayerMoveEvent when moving a rider.
+  # This is necessary for plugins like WorldGuard to detect you entering a region
+  sendMoveEvent: true
 
 # Other Ride settings
 Rides:
