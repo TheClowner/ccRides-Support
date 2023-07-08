@@ -3,7 +3,7 @@
 ##############################
 
 # Please do not touch
-confVersion: 12
+confVersion: 13
 
 # Settings about linking to other plugins
 Integrations:
@@ -61,7 +61,7 @@ Rides:
     # Allow rides to start automatically after passing their 'START_PLAYERS' setting.
     enableAutoStart: true
     # Force Chunks containing a ride to stay loaded
-    forceLoadChunks: false
+    forceLoadChunks: true
     # Options for ride queues
     Queue:
       # Enable or disable queues completely
@@ -79,3 +79,4 @@ Rides:
 Debug:
   chunkLoad: false
   chunkUnload: false
+  general: false
